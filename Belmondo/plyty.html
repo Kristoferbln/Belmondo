@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plyta</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        #naglowek{
+            background-color: black;
+            height: 200px;
+            text-align: center;
+        }
+        #naglowek img{
+            height: 200px;
+            width: 300px;
+        }
+        #wybor{
+            background-color: black;
+            height: 30px;
+        }
+        #wybor a{
+            text-decoration: none;
+            color: white;
+            font-size: 25px;
+            padding: 10px;
+            font-weight: bold;
+        }
+        #wybor a:hover{
+            background-color: white;
+            color: black;
+        }
+        #srodek{
+            height: 600px;
+            display: flex;
+        }
+        #belmondo{
+            width: 30%;
+            height: 100%;
+        }
+        #belmondo img{
+            width: 570px;
+            height: 600px;
+        }
+        #nutki{
+            font-weight: bold;
+            font-size: 20px;
+            padding-top: 20px;
+            padding-left: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #nutki img{
+            height: 20px;
+            width: 20px;
+        }
+        button{
+            padding: 5px;
+            border-radius: 10px;
+        }
+        button:hover{
+            box-shadow: 0px 0px 10px black;
+        }
+        #podpis{
+            height: 200px;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: right;
+        }
+        #podpis a{
+            padding-right: 100px;
+        }
+    </style>
+    <div id="naglowek">
+        <img src="MOBBYN.png">
+    </div>
+    <div id="wybor">
+        <a href="strona glowna.html">STRONA GŁÓWNA</a>
+        <a href="plyty.html">PŁYTA</a>
+    </div>
+    <div id="srodek">
+        <div id="belmondo">
+            <img src="belmondo.jpg">
+        </div>
+        <div id="nutki">
+            1. Belmondo - Dzień Dobry <audio id="dziendobry" src="dziendobry.mp3"></audio>
+            <button id="DDO"><img src="przycisk.png"></button>&nbsp;<button id="DDP"><img src="pauza.png"></button><br>
+            2. BELMONDO X GSP feat. YOMENIK - YOMENIK <audio id="yomenik" src="BELMONDO X GSP feat. YOMENIK - YOMENIK.mp3"></audio>
+            <button id="YO"><img src="przycisk.png"></button>&nbsp;<button id="YP"><img src="pauza.png"></button><br>
+            3. Pillow Talk Kaz Bałagane x Belmondo <audio id="PT" src="03.Pillow Talk  Kaz Bałagane x Belmondo -.mp3"></audio>
+            <button id="PTO"><img src="przycisk.png"></button>&nbsp;<button id="PTP"><img src="pauza.png"></button><br>
+            4. BELMONDO - NA BANKIECIE <audio id="NB" src="BELMONDO - NA BANKIECIE (freestyle)  PROD. S3.mp3"></audio>
+            <button id="NBO"><img src="przycisk.png"></button>&nbsp;<button id="NBP"><img src="pauza.png"></button><br>
+            5. BELMONDO - GNOCCHI <audio id="gnocchi" src="BELMONDO - GNOCCHI.mp3"></audio>
+            <button id="GO"><img src="przycisk.png"></button>&nbsp;<button id="GP"><img src="pauza.png"></button>
+        </div>
+    </div>
+    <div id="podpis">
+        <p>Copyright: Kacper Krzysztof</p> 
+    </div>
+
+    <script>
+        let audio=document.querySelector('#dziendobry');
+        document.querySelector('#DDO').onclick=function(){
+            audio.play();
+        }
+        document.querySelector('#DDP').onclick=function(){
+            audio.pause();
+        }
+        let audio1=document.querySelector('#yomenik');
+        document.querySelector('#YO').onclick=function(){
+            audio1.play();
+        }
+        document.querySelector('#YP').onclick=function(){
+            audio1.pause();
+        }
+        let audio2=document.querySelector('#PT');
+        document.querySelector('#PTO').onclick=function(){
+            audio2.play();
+        }
+        document.querySelector('#PTP').onclick=function(){
+            audio2.pause();
+        }
+        let audio3=document.querySelector('#NB');
+        document.querySelector('#NBO').onclick=function(){
+            audio3.play();
+        }
+        document.querySelector('#NBP').onclick=function(){
+            audio3.pause();
+        }
+        let audio4=document.querySelector('#gnocchi');
+        document.querySelector('#GO').onclick=function(){
+            audio4.play();
+        }
+        document.querySelector('#GP').onclick=function(){
+            audio4.pause();
+        }
+    </script>
+</body>
+</html>
